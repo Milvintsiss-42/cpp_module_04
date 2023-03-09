@@ -3,3 +3,4 @@
 **/build
 **/*.o
 ex00/animal
+ex01/smartAnimal
