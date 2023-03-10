@@ -4,3 +4,4 @@
 **/*.o
 ex00/animal
 ex01/smartAnimal
+ex02/abstract
