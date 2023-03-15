@@ -21,7 +21,7 @@ protected:
 public:
 	WrongAnimal();
 	WrongAnimal(WrongAnimal const & src);
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 
 	void makeSound() const;
 
