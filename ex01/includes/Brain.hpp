@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 18:24:03 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/09 19:41:14 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/15 17:16:42 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 	~Brain();
 
 	const std::string * getIdeas() const;
+	void setIdeaAtIndex(std::string idea, int index);
 
 	Brain &operator=(Brain const &rhs);
 };

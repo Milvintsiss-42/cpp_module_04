@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 18:30:17 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/09 19:41:06 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/15 16:40:20 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,13 @@ Brain::~Brain()
 const std::string * Brain::getIdeas() const
 {
 	return this->_ideas;
+}
+
+void Brain::setIdeaAtIndex(std::string idea, int index)
+{
+	if (index < 0 || index >= 100)
+		return ;
+	this->_ideas[index] = idea;
 }
 
 Brain &Brain::operator=(Brain const &rhs)

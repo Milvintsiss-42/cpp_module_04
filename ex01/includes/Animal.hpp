@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:26:49 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/09 20:42:18 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/15 16:50:58 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ public:
 
 	std::string getType() const;
 
-	Animal &operator=(Animal const &rhs);
+	virtual Animal &operator=(Animal const &rhs);
 };
