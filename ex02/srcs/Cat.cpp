@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:32:36 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/10 13:21:39 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/15 17:27:18 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Cat::Cat(Cat const & src) : AAnimal(src)
 	std::cout << "Cat copy constructor called." << std::endl;
 	this->_type = "Cat";
 	this->_brain = new Brain();
+	*this->_brain = *src._brain;
 }
 
 Cat::~Cat()
@@ -36,4 +37,13 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout << "\"Maow!\"" << std::endl;
+}
+
+Cat &Cat::operator=(Cat const &rhs)
+{
+	this->AAnimal::operator=(rhs);
+	delete this->_brain;
+	this->_brain = new Brain();
+	*this->_brain = *rhs._brain;
+	return *this;
 }

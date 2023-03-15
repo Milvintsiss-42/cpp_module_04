@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:36:12 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/10 13:24:17 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/15 17:27:00 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main()
 {
-	AAnimal ** animals = new AAnimal * [10];
+	AAnimal *animals[10];
 
 	for (int i = 0; i < 10; i += 2)
 	{
@@ -27,7 +27,18 @@ int main()
 	{
 		delete animals[i];
 	}
-	delete [] animals;
+
+	Cat first = Cat();
+	Cat second = Cat(first);
+
+	Brain brain = Brain();
+	brain.setIdeaAtIndex("Some idea", 1);
+
+	Brain brainCopy = Brain(brain);
+	brainCopy.setIdeaAtIndex("Some other idea", 1);
+
+	std::cout << brain.getIdeas()[1] << std::endl;
+	std::cout << brainCopy.getIdeas()[1] << std::endl;
 
 	// AAnimal animal = AAnimal();
 }

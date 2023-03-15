@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AAnimal.cpp                                        :+:      :+:    :+:   */
+/*   AAAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 13:22:00 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/10 13:22:50 by ple-stra         ###   ########.fr       */
+/*   Created: 2023/01/30 15:37:01 by ple-stra          #+#    #+#             */
+/*   Updated: 2023/03/15 17:22:58 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ std::string AAnimal::getType() const
 
 AAnimal &AAnimal::operator=(AAnimal const &rhs)
 {
-	this->_type = rhs.getType();
+	(void)rhs;
 	return *this;
 }
