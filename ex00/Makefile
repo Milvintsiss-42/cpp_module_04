@@ -6,7 +6,7 @@
 #    By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/29 15:36:23 by ple-stra          #+#    #+#              #
-#    Updated: 2023/03/09 17:53:05 by ple-stra         ###   ########.fr        #
+#    Updated: 2023/03/15 13:58:46 by ple-stra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,6 @@ BUILD_DIR	= build
 OBJ_DIR		= $(BUILD_DIR)/objs
 OBJ			= $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 INC			= -I./ -I./includes
-DEPS		:= $(OBJ:.o=.d)
--include $(DEPS)
 
 CC			= c++
 CFLAGS		= -std=c++98 -Wall -Wextra
@@ -43,7 +41,6 @@ all			: $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRCS_DIR)/%.cpp
 	@mkdir -p $(shell dirname $@)
-	$(CC) $(CFLAGS) $(INC) -c -MM -MF $(patsubst %.o,%.d,$@) $<
 	$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 $(NAME)		: $(OBJ)
