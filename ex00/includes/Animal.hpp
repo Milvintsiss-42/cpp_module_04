@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:26:49 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/09 17:43:40 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/15 14:19:27 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ protected:
 public:
 	Animal();
 	Animal(Animal const & src);
-	~Animal();
+	virtual ~Animal();
 
 	virtual void makeSound() const;
 

@@ -6,7 +6,7 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 17:36:12 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/09 17:52:23 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/15 14:17:55 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ int main()
 		i->makeSound();
 		j->makeSound();
 		meta->makeSound();
+		delete meta;
+		delete j;
+		delete i;
 	}
 	{
 		const WrongAnimal* meta = new WrongAnimal();
@@ -33,5 +36,7 @@ int main()
 		std::cout << i->getType() << " " << std::endl;
 		i->makeSound();
 		meta->makeSound();
+		delete meta;
+		delete i;
 	}
 }
