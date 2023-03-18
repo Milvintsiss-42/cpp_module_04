@@ -6,23 +6,27 @@
 /*   By: ple-stra <ple-stra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 18:30:17 by ple-stra          #+#    #+#             */
-/*   Updated: 2023/03/15 16:40:20 by ple-stra         ###   ########.fr       */
+/*   Updated: 2023/03/18 17:28:32 by ple-stra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
+#include <iostream>
 
 Brain::Brain()
 {
+	std::cout << "Brain constructor called." << std::endl;
 }
 
 Brain::Brain(Brain const & src)
 {
+	std::cout << "Brain copy constructor called." << std::endl;
 	*this = src;
 }
 
 Brain::~Brain()
 {
+	std::cout << "Brain destructor called." << std::endl;
 }
 
 const std::string * Brain::getIdeas() const
